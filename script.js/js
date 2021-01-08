@@ -1,0 +1,7 @@
+
+//this is simgle line comments
+/*This is a longer comment, well not really. Now it's longer*/
+alert('Hello World');
+
+var favoriteFood = 'pickles!';
+document.write(favoriteFood);
