@@ -7,19 +7,19 @@ let pokemonList = [
     height: .7,
     type: ['grass', 'poison'],
     evolutions: 2
-  }
+  },
     {
       name: 'squirtle',
       height: .5,
       type: ['water'],
       evolutions: 2
-    }
+    },
       {
         name: 'charmander',
         height: .6,
         type: ['fire'],
         evolutions: 2
-      }
+      },
         {
           name: 'pikachu',
           height: .4,
