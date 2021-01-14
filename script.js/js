@@ -1,4 +1,4 @@
-let pokemon = [
+let pokemonList = [
   {
     name: 'bulbasaur',
     height: .7,
@@ -24,8 +24,21 @@ let pokemon = [
           evolutions: 1
         }
 ];
+document.write('pikachu!');
+
+//Displays pokemon name and height is not working
+  // for (let i = 0; i < pokemon.length; i++) {
+  //   document.write(pokemon[i].name + ' height:' + pokemon[i].height)
 
 
-//Displays pokemon name and height
-  for (let i = 0; i < pokemon.length; i++) {
-    document.write(pokemon[i].name + ' height:' + pokemon[i].height)
+    //is working, Displays pokemon name and height
+    for(let pokemon of pokemonList){
+      document.write(pokemon.name + ' height:' + pokemon.height + ' ')
+    }
+
+//alerts that a pokemon is taller than 1m
+    for (let i=0; i < pokemonList.length; i++){
+      if (pokemonList[i].height >1){
+        document.write(pokemonList[i].name + " wow, thats big!");
+      }
+    }
