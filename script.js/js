@@ -1,7 +1,4 @@
-
-//this is simgle line comments
-/*This is a longer comment, well not really. Now it's longer*/
-let pokemonList = [
+let pokemon = [
   {
     name: 'bulbasaur',
     height: .7,
@@ -9,8 +6,8 @@ let pokemonList = [
     evolutions: 2
   },
     {
-      name: 'squirtle',
-      height: .5,
+      name: 'blastoise',
+      height: 1.6,
       type: ['water'],
       evolutions: 2
     },
@@ -27,3 +24,8 @@ let pokemonList = [
           evolutions: 1
         }
 ];
+
+
+//Displays pokemon name and height
+  for (let i = 0; i < pokemon.length; i++) {
+    document.write(pokemon[i].name + ' height:' + pokemon[i].height)
