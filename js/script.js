@@ -1,3 +1,7 @@
+var favoriteFood = 'pickles!';
+document.write(favoriteFood);
+
+
 let pokemonList = [
   {
     name: 'bulbasaur',
@@ -25,6 +29,9 @@ let pokemonList = [
         }
 ];
 document.write('pikachu!');
+
+var favoriteFood = 'pickles!';
+document.write(favoriteFood);
 
 //Displays pokemon name and height is not working
   // for (let i = 0; i < pokemon.length; i++) {
