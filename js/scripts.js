@@ -1,7 +1,3 @@
-var favoriteFood = 'pickles!';
-document.write(favoriteFood);
-
-
 let pokemonList = [
   {
     name: 'bulbasaur',
@@ -28,24 +24,24 @@ let pokemonList = [
           evolutions: 1
         }
 ];
-document.write('pikachu!');
-
-var favoriteFood = 'pickles!';
-document.write(favoriteFood);
-
+for (let i = 0; i < pokemonList.length; i++){
+  document.write("<p>" + pokemonList[i].name + " height:" + pokemonList[i].height + "</p>");
+  // printing pokemonList[i]’s other details
+  // ...
+}
 //Displays pokemon name and height is not working
   // for (let i = 0; i < pokemon.length; i++) {
   //   document.write(pokemon[i].name + ' height:' + pokemon[i].height)
 
 
     //is working, Displays pokemon name and height
-    for(let pokemon of pokemonList){
-      document.write(pokemon.name + ' height:' + pokemon.height + ' ')
-    }
+    // for(let pokemon of pokemonList){
+    //   document.write(pokemon.name + ' height:' + pokemon.height + ' ')
+    // }
 
 //alerts that a pokemon is taller than 1m
     for (let i=0; i < pokemonList.length; i++){
       if (pokemonList[i].height >1){
-        document.write(pokemonList[i].name + " wow, thats big!");
+        document.write("<p>" + pokemonList[i].name + " wow, thats big!" + "</p>");
       }
     }
