@@ -24,20 +24,16 @@ let pokemonList = [
           evolutions: 1
         }
 ];
-for (let i = 0; i < pokemonList.length; i++){
-  document.write("<p>" + pokemonList[i].name + " height:" + pokemonList[i].height + "</p>");
-  // printing pokemonList[i]’s other details
-  // ...
-}
-//Displays pokemon name and height is not working
-  // for (let i = 0; i < pokemon.length; i++) {
-  //   document.write(pokemon[i].name + ' height:' + pokemon[i].height)
 
+// printing pokemonList[i]’s other details
+// for (let i = 0; i < pokemonList.length; i++){
+//   document.write("<p>" + pokemonList[i].name + " height:" + pokemonList[i].height +"</p>");
+// }
 
-    //is working, Displays pokemon name and height
-    // for(let pokemon of pokemonList){
-    //   document.write(pokemon.name + ' height:' + pokemon.height + ' ')
-    // }
+pokemonList.forEach(function(pokemon) {
+  document.write("<p>" + pokemon.name + " :" + pokemon.height + " units tall" + "</br>" + "</p>");
+});
+
 
 //alerts that a pokemon is taller than 1m
     for (let i=0; i < pokemonList.length; i++){
