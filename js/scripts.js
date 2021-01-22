@@ -5,34 +5,87 @@ let pokemonList = [
     type: ['grass', 'poison'],
     evolutions: 2
   },
+  {
+    name: 'blastoise',
+    height: 1.6,
+    type: ['water'],
+    evolutions: 2
+  },
+  {
+    name: 'charmander',
+    height: .6,
+    type: ['fire'],
+    evolutions: 2
+  },
+  {
+    name: 'pikachu',
+    height: .4,
+    type: ['electric'],
+    evolutions: 1
+  }
+];
+
+
+//IIFE fution with loop to display pokemonList on webpage
+let pokemonRepository = (function () {
+  let pokemonList = [
+    {
+      name: 'bulbasaur',
+      height: 2.04,
+      type: ['grass', 'poison'],
+      evolutions: 2
+    },
     {
       name: 'blastoise',
-      height: 1.6,
+      height: 5.03,
       type: ['water'],
       evolutions: 2
     },
-      {
-        name: 'charmander',
-        height: .6,
-        type: ['fire'],
-        evolutions: 2
-      },
-        {
-          name: 'pikachu',
-          height: .4,
-          type: ['electric'],
-          evolutions: 1
-        }
-];
+    {
+      name: 'charmander',
+      height: 2,
+      type: ['fire'],
+      evolutions: 2
+    },
+    {
+      name: 'pikachu',
+      height: 1.04,
+      type: ['electric'],
+      evolutions: 1
+    }
+  ];
+
+  function getAll() {
+    return pokemonList
+    };
+
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  return {
+    getAll: getAll,
+    add: add,
+  };
+})();
+
+console.log(pokemonRepository.getAll());
+
+//command to add more pokemon to pokemonRepository
+pokemonRepository.add({ name: 'Raichu',height: 2.07, type: ['electric,' 'ground'], evolutions: 0});
+console.log(pokemonRepository.getAll());
+
+
 
 // printing pokemonList[i]’s other details
 // for (let i = 0; i < pokemonList.length; i++){
 //   document.write("<p>" + pokemonList[i].name + " height:" + pokemonList[i].height +"</p>");
 // }
 
-pokemonList.forEach(function(pokemon) {
-  document.write("<p>" + pokemon.name + " :" + pokemon.height + " units tall" + "</br>" + "</p>");
-});
+// forEach() funtion
+// pokemonList.forEach(function(pokemon) {
+//   document.write("<p>" + pokemon.name + " :" + pokemon.height + " units tall" + "</br>" + "</p>");
+// });
 
 
 //alerts that a pokemon is taller than 1m
