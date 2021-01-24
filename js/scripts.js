@@ -28,7 +28,7 @@ let pokemonList = [
 
 //IIFE function
 let pokemonRepository = (function () {
-  var pokemonList = [
+  let pokemonList = [
     {
       name: 'bulbasaur',
       height: 2.04,
@@ -68,13 +68,13 @@ let pokemonRepository = (function () {
 console.log(pokemonRepository.getAll());
 
 //command to add more pokemon to pokemonRepository
-pokemonRepository.add({ name: 'Raichu',height: 2.07, type: ['electric,' 'ground']});
+pokemonRepository.add({ name: 'Raichu',height: 2.07, type: ['electric', 'ground']});
 console.log(pokemonRepository.getAll());
 
 
 
 //ForEach() to diaplay pokemon info in webpage
-(function () {
+(function getAll() {
     pokemonList.forEach(function(pokemon) {
         let pokemonName = pokemon.name
         let pokemonHeight = pokemon.height
@@ -89,7 +89,7 @@ console.log(pokemonRepository.getAll());
 })();
 
 
-
+ how you can refer to functions inside of it from outside of i
 // printing pokemonList[i]’s other details
 // for (let i = 0; i < pokemonList.length; i++){
 //   document.write("<p>" + pokemonList[i].name + " height:" + pokemonList[i].height +"</p>");
