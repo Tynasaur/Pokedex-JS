@@ -89,7 +89,6 @@ console.log(pokemonRepository.getAll());
 })();
 
 
- how you can refer to functions inside of it from outside of i
 // printing pokemonList[i]’s other details
 // for (let i = 0; i < pokemonList.length; i++){
 //   document.write("<p>" + pokemonList[i].name + " height:" + pokemonList[i].height +"</p>");
