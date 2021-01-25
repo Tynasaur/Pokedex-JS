@@ -74,7 +74,7 @@ console.log(pokemonRepository.getAll());
 
 
 //ForEach() to diaplay pokemon info in webpage
-(function getAll() {
+(function pokemonRepository() {
     pokemonList.forEach(function(pokemon) {
         let pokemonName = pokemon.name
         let pokemonHeight = pokemon.height
@@ -87,6 +87,7 @@ console.log(pokemonRepository.getAll());
             document.write('<br>', '<br>');
         });
 })();
+
 
 
 // printing pokemonList[i]’s other details
