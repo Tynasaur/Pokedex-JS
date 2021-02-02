@@ -1,109 +1,61 @@
-let pokemonList = [
-  {
-    name: 'bulbasaur',
-    height: .7,
-    type: ['grass', 'poison'],
-    evolutions: 2
-  },
-  {
-    name: 'blastoise',
-    height: 1.6,
-    type: ['water'],
-    evolutions: 2
-  },
-  {
-    name: 'charmander',
-    height: .6,
-    type: ['fire'],
-    evolutions: 2
-  },
-  {
-    name: 'pikachu',
-    height: .4,
-    type: ['electric'],
-    evolutions: 1
-  }
-];
 
-
-//IIFE function
+//pokemonRepository IIFE fucntion to call and display pokemon
 let pokemonRepository = (function () {
-  let pokemonList = [
+  let repository = [
     {
-      name: 'bulbasaur',
-      height: 2.04,
-      type: ['grass', 'poison'],
+      name: "Bulbasaur",
+      height: 0.7,
+      types: ["grass", "poison"],
     },
     {
-      name: 'blastoise',
-      height: 5.03,
-      type: ['water'],
+      name: "Charizard",
+      height: 1.7,
+      types: ["fire", "flying"],
     },
     {
-      name: 'charmander',
-      height: 2,
-      type: ['fire'],
+      name: "Squirtle",
+      height: 1,
+      types: ["water"],
     },
-    {
-      name: 'pikachu',
-      height: 1.04,
-      type: ['electric'],
-    }
   ];
 
-  function getAll() {
-    return pokemonList
-    };
-
   function add(pokemon) {
-    pokemonList.push(pokemon);
+    if (
+      typeof pokemon === "object" &&
+      "name" in pokemon &&
+      "height" in pokemon &&
+      "types" in pokemon
+    ) {
+      repository.push(pokemon);
+    } else {
+      console.log("pokemon is not correct");
+    }
   }
-
+  function getAll() {
+    return repository;
+  }
+  function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listpokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listpokemon.appendChild(button);
+    pokemonList.appendChild(listpokemon);
+  }
   return {
-    getAll: getAll,
     add: add,
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
 
+pokemonRepository.add({ name: "Pikachu", height: 0.3, types: ["electric"] });
+
 console.log(pokemonRepository.getAll());
 
-//command to add more pokemon to pokemonRepository
-pokemonRepository.add({ name: 'Raichu',height: 2.07, type: ['electric', 'ground']});
-console.log(pokemonRepository.getAll());
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
+});
 
-
-
-//ForEach() to diaplay pokemon info in webpage
-(function pokemonRepository() {
-    pokemonList.forEach(function(pokemon) {
-        let pokemonName = pokemon.name
-        let pokemonHeight = pokemon.height
-        // condition to add wow that's big if height is greater than 7
-        if(pokemonHeight > 5) {
-            document.write(pokemonName + ' (height : ' + pokemonHeight + ')' + ' - Wow, that\'s big!');
-        } else {
-            document.write(pokemonName + ' (height : ' + pokemonHeight + ')');
-        }
-            document.write('<br>', '<br>');
-        });
-})();
-
-
-
-// printing pokemonList[i]’s other details
-// for (let i = 0; i < pokemonList.length; i++){
-//   document.write("<p>" + pokemonList[i].name + " height:" + pokemonList[i].height +"</p>");
-// }
-
-// forEach() funtion
-// pokemonList.forEach(function(pokemon) {
-//   document.write("<p>" + pokemon.name + " :" + pokemon.height + " units tall" + "</br>" + "</p>");
-// });
-
-
-// //alerts that a pokemon is taller than 1m
-//     for (let i=0; i < pokemonList.length; i++){
-//       if (pokemonList[i].height >1){
-//         document.write("<p>" + pokemonList[i].name + " wow, thats big!" + "</p>");
-//       }
-//     }
+showDetails(pokemon)
