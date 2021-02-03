@@ -28,7 +28,7 @@ p {
   font-size: 20px;
 }
 
-.button-class{
+.button-class {
   background-color: white;
   border: none;
   text-align: left;
@@ -52,4 +52,3 @@ p {
   background: linear-gradient(#e5f4f9, #b2e0ef, #7fcce5, #0089b7, #0099CC, #b2e0ef); /* Standard syntax */
 
   }
-}

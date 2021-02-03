@@ -1,5 +1,3 @@
-
-//pokemonRepository IIFE fucntion to call and display pokemon
 let pokemonRepository = (function () {
   let repository = [
     {
@@ -21,6 +19,7 @@ let pokemonRepository = (function () {
 
   function add(pokemon) {
     if (
+      //ensures proper pokemon details are added
       typeof pokemon === "object" &&
       "name" in pokemon &&
       "height" in pokemon &&
@@ -34,6 +33,12 @@ let pokemonRepository = (function () {
   function getAll() {
     return repository;
   }
+
+  function showDetails(pokemon){
+    console.log(pokemon);
+  }
+
+//creates button for each pokemon name
   function addListItem(pokemon){
     let pokemonList = document.querySelector(".pokemon-list");
     let listpokemon = document.createElement("li");
@@ -42,7 +47,12 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
+    button.addEventListener("click", function (event) {
+      showDetails(pokemon);
+    });
   }
+
+
   return {
     add: add,
     getAll: getAll,
@@ -50,6 +60,7 @@ let pokemonRepository = (function () {
   };
 })();
 
+//added pikachu to pokemonRepository
 pokemonRepository.add({ name: "Pikachu", height: 0.3, types: ["electric"] });
 
 console.log(pokemonRepository.getAll());
@@ -57,5 +68,3 @@ console.log(pokemonRepository.getAll());
 pokemonRepository.getAll().forEach(function (pokemon) {
   pokemonRepository.addListItem(pokemon);
 });
-
-// showDetails(pokemon)
