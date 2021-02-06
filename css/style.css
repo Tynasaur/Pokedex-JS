@@ -1,3 +1,9 @@
+:root {
+--background-color: #red;
+--button-color: #hhh;
+--font-colot: #000;
+  }
+
 
   #bg {
       z-index: -1;
@@ -8,6 +14,8 @@
       /* Set up proportionate scaling */
       width: 100%;
       height: auto;
+      background-size: cover;
+      background-color: var(--background-color);
 
       /* Set up positioning */
       position: fixed;
@@ -21,34 +29,24 @@ h1 {
   font-size: 42px;
 }
 
-p {
-  text-align: left;
-  padding-left: 110px;
-  padding-top: 12px;
-  font-size: 20px;
+ .pokemon-list {
+  list-style-type: none;
 }
 
-.button-class {
-  background-color: white;
-  border: none;
-  text-align: left;
-  padding-left: 110px;
-  padding-top: 12px;
-  font-size: 20px;
-  padding: 7px;
-  margin-top: 1em;
-  margin-left: 5em;
-  border-radius: 5%;
-  color: white; /* Text color */
-
-  background: #0099cc; /* For browsers that do not support gradients */
-
-  background: -webkit-linear-gradient(#e5f4f9, #b2e0ef, #7fcce5, #0089b7, #0099CC, #b2e0ef); /* For Safari 5.1 to 6.0 */
-
-  background: -o-linear-gradient(#e5f4f9, #b2e0ef, #7fcce5, #0089b7, #0099CC, #b2e0ef); /* For Opera 11.1 to 12.0 */
-
-  background: -moz-linear-gradient(#e5f4f9, #b2e0ef, #7fcce5, #0089b7, #0099CC, #b2e0ef); /* For Firefox 3.6 to 15 */
-
-  background: linear-gradient(#e5f4f9, #b2e0ef, #7fcce5, #0089b7, #0099CC, #b2e0ef); /* Standard syntax */
-
+  .button-class {
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #4caf50;
   }
