@@ -1,10 +1,10 @@
 /
-:root {
+/* :root {
 --background-color: #red;
 --button-color: #307bfb;
 --hover-button-color: #183d9c;
 --font-color: #000;
-  }
+  } */
 
   #bg {
       z-index: -1;
@@ -24,7 +24,7 @@
       left: 0;
     }
 
-h1 {
+/* h1 {
   text-align: left;
   margin-top: 2%;
   margin-left: 5%;
@@ -34,12 +34,12 @@ h1 {
 
  .pokemon-list {
   list-style-type: none;
-}
+} */
 
 
 
 
-.button-class {
+/* .button-class {
   margin-left: 100px;
   position: relative;
   width: 200px; height: 45px;
@@ -58,9 +58,9 @@ h1 {
   position: relative;
   top: 30px;
   left: 7%;
-}
+} */
 
-.button-class:after {
+/* .button-class:after {
   position: absolute;
   top: 90%; left: 0;
   width: 100%; height: 100%;
@@ -79,4 +79,4 @@ h1 {
 html,
 body {
   font-family: Arial, sans-serif;
-}
+} */
