@@ -12,7 +12,6 @@
 
 <body>
   <!-- <img src="img/pokedex-background.jpg" id="bg" alt="" tabindex="-1"> -->
-  <!-- <div class="jumbotron" style="background-image: url('img/pokedex-background.jpg');"></div> -->
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
@@ -23,9 +22,9 @@
   </nav>
 
   <!--Button trigger modaldata- -->
-  <div class= "pokemon-list list-group" data-toggle="modal">
-    <button type="button" class="list-group-item list-group-item-action btn-block btn btn-primary" aria-pressed="false" ></button>
-  </div>
+  <div class= "pokemon-list list-group"  >
+    <button type="button" data-target="#pokemonModal" data-toggle="modal" class="list-group-item list-group-item-action btn-block btn btn-primary" id="pokemonModal aria-pressed="false" ></button>
+    </div>
 
   <!-- Modal container -->
   <div class="modal fade" id="pokemonModal" tabindex="-1" aria-hidden="true" role="dialog">
@@ -45,6 +44,7 @@
     </div>
   </div>
 </div>
+
 
   <footer>
 
