@@ -7,11 +7,12 @@
   <link rel="shortcut icon" type="image" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/770px-Pok%C3%A9_Ball_icon.svg.png">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
-  <img src="img/pokedex-background.jpg" id="bg" alt="" tabindex="-1">
+  <!-- <img src="img/pokedex-background.jpg" id="bg" alt="" tabindex="-1"> -->
+  <!-- <div class="jumbotron" style="background-image: url('img/pokedex-background.jpg');"></div> -->
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
@@ -21,17 +22,16 @@
     </a>
   </nav>
 
-  <!--Button trigger modal-->
-  <div class= "pokemon-list list-group list-unstyled"  data-toggle="modal" data-target="#pokemonModal">
-    <button type="button" class="list-group-item list-group-item-action btn-block btn btn-primary" aria-pressed="false" data-target="#pokemonModal"></button>
+  <!--Button trigger modaldata- -->
+  <div class= "pokemon-list list-group" data-toggle="modal">
+    <button type="button" class="list-group-item list-group-item-action btn-block btn btn-primary" aria-pressed="false" ></button>
   </div>
 
   <!-- Modal container -->
   <div class="modal fade" id="pokemonModal" tabindex="-1" aria-hidden="true" role="dialog">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-body">
+    <div class="modal-dialog" role="document" style="background-color: white">
       <div class="modal-header">
-        <h5 class="modal-title" id="pokemonModalLabel"></h5>
+        <h2 class="modal-title" id="pokemonModalLabel"></h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">Close
           <span aria-hidden="true">&times;</span>
         </button>
@@ -50,7 +50,6 @@
 
   </footer>
   <!--external javascript -->
-
   <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
@@ -61,14 +60,12 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
   </script>
   <script
-    src="js/fetch-polyfill.js">
+    src="js/fetch.umd.js">
  </script>
 	<script
     src="js/scripts.js">
   </script>
-  <script
-    src="js/promise-polyfill.js">
-  </script>
+
 </body>
 
 </html>
