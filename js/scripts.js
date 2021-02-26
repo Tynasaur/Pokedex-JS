@@ -1,5 +1,5 @@
 let pokemonRepository = (function () {
-  let pokemonList = [];
+  let container = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   
   //adds pokemon name and type from apiUrl
@@ -8,18 +8,19 @@ let pokemonRepository = (function () {
       typeof pokemon === "object" &&
       "name" in pokemon && "type"
     ) {
-      pokemonList.push(pokemon);
+      container.push(pokemon);
     } else {
       console.log("pokemon is not correct");
     }
   }
   
   function getAll() {
-    return pokemonList;
+    return container;
   }
   
   //creates button to display pokemon name
   function addListItem(pokemon) {
+<<<<<<< Updated upstream
     const pokemonList = document.querySelector(".pokemon-list");
     const listPokemon = document.createElement("li");
     const button = document.createElement("button");
@@ -28,6 +29,18 @@ let pokemonRepository = (function () {
     listPokemon.appendChild(button);
     pokemonList.appendChild(listPokemon);
     button.addEventListener("click", function() {
+=======
+    let container = document.querySelector(".pokemon-list");
+    let listPokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.dataset["target"] = "#pokemonModal";
+    button.dataset["toggle"] = "modal";
+    button.classList.add("list-group-item", "list-group-item-action", "btn-btn", "btn");
+    listPokemon.appendChild(button);
+    container.appendChild(listPokemon);
+    button.addEventListener("click", function (event) {
+>>>>>>> Stashed changes
       showDetails(pokemon);
     });
   }
@@ -87,6 +100,7 @@ let pokemonRepository = (function () {
     imagePokemonFront.attr("src", pokemon.imageUrl);
     // console.log(pokemon.imageUrlFront);
 
+<<<<<<< Updated upstream
     const pokemonHeight = $("<p>" + "height: " + pokemon.height + "</p>");
     const pokemonWeight = $("<p>" + "weight: " + pokemon.weight + "</p>");
     
@@ -98,6 +112,24 @@ let pokemonRepository = (function () {
     };
   
   
+=======
+    let pokemonName = $("<h1>" + pokemon.name + "</h1>");
+    console.log(pokemon.name);
+    let pokemonHeight = $("<p>" + "height: " + pokemon.height + "</p>");
+    let pokemonWeight = $("<p>" + "weight: " + pokemon.weight + "</p>");
+    let pokemonType = $("<p>" + "type: " + pokemon.type + "</p>");
+
+
+    modalTitle.append(pokemonName);
+    modalBody.append(imagePokemonFront);
+    modalBody.append(pokemonHeight);
+    modalBody.append(pokemonWeight);
+    // modalBody.append(pokemonType);
+    $("pokemonModal").modal("show");
+  };
+
+
+>>>>>>> Stashed changes
   return {
     add: add,
     getAll: getAll,
