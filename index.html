@@ -11,43 +11,30 @@
 </head>
 
 <body>
-  <!-- <img src="img/pokedex-background.jpg" id="bg" alt="" tabindex="-1"> -->
-  <!-- <div class="jumbotron" style="background-image: url('img/pokedex-background.jpg');"></div> -->
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/770px-Pok%C3%A9_Ball_icon.svg.png"
-        width="30" height="30" class="d-inline-block align-top" alt="">
+        width="30" height="30" class="d-inline-block align-top" alt="pokeball-logo">
       Pokedex
     </a>
   </nav>
 
-  <!--Button trigger modaldata- -->
-<<<<<<< Updated upstream
-  <div class= "pokemon-list list-group" data-toggle="modal">
-    <button type="button" class="list-group-item list-group-item-action btn-block btn btn-primary" aria-pressed="false" ></button>
-=======
-  <div class= "pokemon-list list-group">
-    <li >
-      <!-- <button class= "list-group-item list-group-item-action btn-block btn btn-primary">bulbasaur</button> -->
-      </li>
->>>>>>> Stashed changes
-  </div>
+  <!--Button trigger for modal- -->
+  <div id="pokemon-list" class= "d-flex flex-wrap p-0"></div>
 
-  <!-- Modal container -->
-  <div class="modal fade" id="pokemonModal" tabindex="-1" aria-hidden="true" role="dialog">
-    <div class="modal-dialog" role="document" style="background-color: white">
+  Modal container -->
+  <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="pokemonModal" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title" id="pokemonModalLabel"></h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">Close
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h3 class="modal-title" id="pokemonModalLabel"></h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
       </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
+      <div class="modal-body d-flex flex-column align-items-center">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

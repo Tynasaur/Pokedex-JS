@@ -20,27 +20,20 @@ let pokemonRepository = (function () {
   
   //creates button to display pokemon name
   function addListItem(pokemon) {
-<<<<<<< Updated upstream
-    const pokemonList = document.querySelector(".pokemon-list");
-    const listPokemon = document.createElement("li");
-    const button = document.createElement("button");
-    button.innerText = pokemon.name;
-    // button.classList.add("button-class"); //for css
-    listPokemon.appendChild(button);
-    pokemonList.appendChild(listPokemon);
-    button.addEventListener("click", function() {
-=======
-    let container = document.querySelector(".pokemon-list");
+
+    let container = document.querySelector("#pokemon-list");
     let listPokemon = document.createElement("li");
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.dataset["target"] = "#pokemonModal";
     button.dataset["toggle"] = "modal";
-    button.classList.add("list-group-item", "list-group-item-action", "btn-btn", "btn");
+    button.classList.add("btn", "btn-dark", "col");
+    listPokemon.classList.add('col-12', 'col-md-4');
+    listPokemon.classList.add("list-group-item-warning");
+    listPokemon.classList.add("list-group-item");
     listPokemon.appendChild(button);
     container.appendChild(listPokemon);
     button.addEventListener("click", function (event) {
->>>>>>> Stashed changes
       showDetails(pokemon);
     });
   }
@@ -94,25 +87,13 @@ let pokemonRepository = (function () {
     // ;  
 
     modalBody.empty();
+    modalTitle.empty();
   
     //creating img in modal
     const imagePokemonFront = $('<img class="modal-img" style="width:50%">');
     imagePokemonFront.attr("src", pokemon.imageUrl);
     // console.log(pokemon.imageUrlFront);
 
-<<<<<<< Updated upstream
-    const pokemonHeight = $("<p>" + "height: " + pokemon.height + "</p>");
-    const pokemonWeight = $("<p>" + "weight: " + pokemon.weight + "</p>");
-    
-      modalTitle.text(pokemon.name);
-      modalBody.append(imagePokemonFront);
-      modalBody.append(pokemonHeight);
-      modalBody.append(pokemonWeight);
-      modal.show(modal); //line 78
-    };
-  
-  
-=======
     let pokemonName = $("<h1>" + pokemon.name + "</h1>");
     console.log(pokemon.name);
     let pokemonHeight = $("<p>" + "height: " + pokemon.height + "</p>");
@@ -129,7 +110,6 @@ let pokemonRepository = (function () {
   };
 
 
->>>>>>> Stashed changes
   return {
     add: add,
     getAll: getAll,
