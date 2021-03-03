@@ -1,5 +1,5 @@
 let pokemonRepository = (function () {
-  let container = [];
+  let pokemonContainer = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   
   //adds pokemon name and type from apiUrl
@@ -8,31 +8,31 @@ let pokemonRepository = (function () {
       typeof pokemon === "object" &&
       "name" in pokemon && "type"
     ) {
-      container.push(pokemon);
+      pokemonContainer.push(pokemon);
     } else {
       console.log("pokemon is not correct");
     }
   }
   
   function getAll() {
-    return container;
+    return pokemonContainer;
   }
   
   //creates button to display pokemon name
   function addListItem(pokemon) {
 
-    let container = document.querySelector("#pokemon-list");
+    let pokemonContainer = document.querySelector("#pokemon-container");
     let listPokemon = document.createElement("li");
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.dataset["target"] = "#pokemonModal";
     button.dataset["toggle"] = "modal";
-    button.classList.add("btn", "btn-dark", "col");
+    button.classList.add("btn", "btn-danger", "col");
     listPokemon.classList.add('col-12', 'col-md-4');
-    listPokemon.classList.add("list-group-item-warning");
+    listPokemon.classList.add("list-group-item-light");
     listPokemon.classList.add("list-group-item");
     listPokemon.appendChild(button);
-    container.appendChild(listPokemon);
+    pokemonContainer.appendChild(listPokemon);
     button.addEventListener("click", function (event) {
       showDetails(pokemon);
     });

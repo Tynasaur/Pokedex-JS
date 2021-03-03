@@ -22,5 +22,6 @@ body {
     overflow: hidden;
     z-index: 1;
     font-size: 18px;
+    font-weight: bold;
     text-transform: uppercase;
   }
