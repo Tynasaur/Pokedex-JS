@@ -1,27 +1,25 @@
-
-  
 body {
   background-color: #000;
 }
-   #pokemon-list {
-    list-style-type: none;
-  }
-  
-  p {
-    font-size: 20px;
-    margin: 2px;
-    
-  }
 
-  h1 {
-    text-transform: capitalize;
-  }
-  
-  button {
-    margin: -5;
-    overflow: hidden;
-    z-index: 1;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+li {
+  list-style-type: none;
+}
+
+p {
+  font-size: 20px;
+  margin: 2px;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+/* button {
+  margin: -5;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+} */
