@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>pokedex</title>
-  <link rel="shortcut icon" type="image"
-    href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/770px-Pok%C3%A9_Ball_icon.svg.png">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>pokedex</title>
+    <link rel="shortcut icon" type="image"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/770px-Pok%C3%A9_Ball_icon.svg.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/770px-Pok%C3%A9_Ball_icon.svg.png"
-        width="30" height="30" class="d-inline-block align-top" alt="pokeball-logo">
-      Pokedex
-    </a>
-  </nav>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/770px-Pok%C3%A9_Ball_icon.svg.png"
+          width="30" height="30" class="d-inline-block align-top" alt="pokeball-logo">
+        Pokedex
+      </a>    
+        <a href="https://github.com/Tynasaur" target="_blank">
+				<img src="img/github-128.png" alt="Github" class="svg_logo"></a>
+    </nav>
 
-  <!--Button trigger for modal- -->
-  <div id="pokemon-container" class="d-flex flex-wrap p-0"></div>
+    <!--Button trigger for modal- -->
+    <div id="pokemon-container" class="d-flex flex-wrap p-0" id="searchgroup"></div>
 
-  <!--Modal container -->
-  <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="pokemonModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title"></h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="img/button-close.jpg" </button>
-        </div>
-        <div class="modal-body d-flex flex-column align-items-center">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" alt="close icon" data-dismiss="modal">Close</button>
+    <!--Modal container -->
+    <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="pokemonModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title"></h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="img/button-close.jpg"
+                </button>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" alt="close icon" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <footer>
-
-  </footer>
-  <!--external javascript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    <!--external javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+      </script>
+    <script src="js/fetch.umd.js">
     </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    <script src="js/scripts.js">
     </script>
-  <script src="js/fetch.umd.js">
-  </script>
-  <script src="js/scripts.js">
-  </script>
-
-</body>
+    <script src="dist/scripts.min.js"></script>
+  </body>
 
 </html>
